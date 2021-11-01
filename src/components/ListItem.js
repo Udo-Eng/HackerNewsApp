@@ -38,15 +38,16 @@ import Button from './Button';
 
 // export default ListItem;
 
+// Removed the Filtering property
+// const isSearched = searchTerm => item =>
+//     item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
-const isSearched = searchTerm => item =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase());
-
-function ListItem({ list, searchTerm, onDismiss }) {
+function ListItem({ list, onDismiss }) {
     return (
         <div className="table">
             {
-                list.filter(isSearched(searchTerm)).map((item) =>
+                //Removed filtering property .filter(isSearched(searchTerm))
+                list.map((item) =>
                     < div key={item.objectID} className="table-row" >
                         <span
                             style={{ width: '40%' }}

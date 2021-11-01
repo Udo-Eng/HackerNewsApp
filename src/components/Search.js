@@ -1,3 +1,4 @@
+import Button from './Button';
 // import React, { Component } from 'react';
 
 
@@ -28,21 +29,23 @@
 
 //Refactoring to functional Stateless components 
 
-function Search({ searchTerm, onChange, children }) {
-    //The props is passed via the Function signature 
+const Search = ({ searchTerm, onChange, onSubmit, children }) =>
+//The props is passed via the Function signature 
+
+(
+    <div className="header">
+        <form onSubmit={onSubmit} >
+            <input type="text"
+                placeholder="Search"
+                value={searchTerm}
+                onChange={onChange}
+            />
+            <Button type="submit">{children}</Button>
+        </form>
+
+    </div>
+)
 
 
-    return (
-        <div className="header">
-            <form>
-                <input type="text"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={onChange}
-                />
-            </form>{children}
-        </div>
-    )
 
-}
 export default Search;
