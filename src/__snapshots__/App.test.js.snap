@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Testing  Has a valid snapshot  1`] = `
+<div
+  className="page"
+>
+  <div
+    className="interactions"
+  >
+    <div>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          onChange={[Function]}
+          placeholder="Search"
+          type="text"
+        />
+        <button
+          className="btn"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+  <div
+    className="table"
+  >
+    <div
+      className="table-header "
+    >
+      <span
+        style={
+          Object {
+            "width": "40%",
+          }
+        }
+      >
+        <span
+          className="btn"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Title
+          </button>
+        </span>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "30%",
+          }
+        }
+      >
+        <span
+          className="btn"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Author
+          </button>
+        </span>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        <span
+          className="btn"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Comments
+          </button>
+        </span>
+      </span>
+      <span
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        <span
+          className="btn"
+        >
+          <button
+            onClick={[Function]}
+            type="button"
+          >
+            Points
+          </button>
+        </span>
+      </span>
+      <button
+        className="button"
+        style={
+          Object {
+            "width": "10%",
+          }
+        }
+      >
+        Archive
+      </button>
+    </div>
+  </div>
+  <div
+    className="button"
+  >
+    Loading ....
+  </div>
+</div>
+`;
+
+exports[`Button Testing Has valid snapshot 1`] = `
+<span
+  className="btn"
+>
+  <button
+    type="button"
+  >
+    Add More 
+  </button>
+</span>
+`;
+
+exports[`ListItem Testing Has valid snapshot 1`] = `
+<span
+  className="btn"
+>
+  <button
+    type="button"
+  >
+    Add More 
+  </button>
+</span>
+`;
+
+exports[`Search Testing   Has a valid snapshot  1`] = `
+<div>
+  <form>
+    <input
+      placeholder="Search"
+      type="text"
+    />
+    <button
+      className="btn"
+    >
+      Search
+    </button>
+  </form>
+</div>
+`;

@@ -1,4 +1,6 @@
+import { sortBy } from 'lodash';
 import Button from './Button';
+import Sort from './Sort';
 
 
 // import React, { Component } from 'react';
@@ -42,12 +44,71 @@ import Button from './Button';
 // const isSearched = searchTerm => item =>
 //     item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
-function ListItem({ list, onDismiss }) {
+
+//Declare a Sorts Object 
+const SORTS = {
+    NONE: list => list,
+    TITLE: list => sortBy(list, 'title'),
+    AUTHOR: list => sortBy(list, 'author'),
+    COMMENTS: list => sortBy(list, 'num_comments').reverse(),
+    POINTS: list => sortBy(list, 'points').reverse(),
+}
+
+function ListItems({ list, onDismiss, onSort, sortKey, isSortReverse }) {
+    const sortedList = SORTS[sortKey](list);
+    const reverseSortedList = isSortReverse
+        ? sortedList.reverse()
+        : sortedList;
     return (
         <div className="table">
+            <div className="table-header ">
+                <span style={{ width: '40%' }}>
+                    <Sort
+                        sortKey={'TITLE'}
+                        onSort={onSort}
+                        activeSortList={sortKey}
+                    >
+                        Title
+                    </Sort>
+                </span>
+                <span
+                    style={{ width: '30%' }}
+                >
+                    <Sort
+                        sortKey={'AUTHOR'}
+                        onSort={onSort}
+                        activeSortList={sortKey}
+                    >
+                        Author
+                    </Sort>
+                </span>
+                <span style={{ width: '10%' }}>
+                    <Sort
+                        sortKey={'COMMENTS'}
+                        onSort={onSort}
+                        activeSortList={sortKey}
+                    >
+                        Comments
+                    </Sort>
+                </span>
+                <span style={{ width: '10%' }}>
+                    <Sort
+                        sortKey={'POINTS'}
+                        onSort={onSort}
+                        activeSortList={sortKey}
+                    >
+                        Points
+                    </Sort>
+                </span>
+                {/* <span style={{ width: '10%' }}> */}
+                <button className="button" style={{ width: '10%' }}>
+                    Archive
+                </button>
+                {/* </span> */}
+            </div>
             {
                 //Removed filtering property .filter(isSearched(searchTerm))
-                list.map((item) =>
+                reverseSortedList.map((item) =>
                     < div key={item.objectID} className="table-row" >
                         <span
                             style={{ width: '40%' }}
@@ -77,10 +138,10 @@ function ListItem({ list, onDismiss }) {
                     </div>
                 )
             }
-        </div>
+        </div >
 
     )
 }
 
 
-export default ListItem;
+export default ListItems;

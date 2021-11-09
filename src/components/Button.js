@@ -19,7 +19,6 @@
 
 
 function Button({ onClick, children }) {
-
     return (
         <span className="btn">
             <button type="button"
