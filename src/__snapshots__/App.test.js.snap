@@ -115,9 +115,13 @@ exports[`App Testing  Has a valid snapshot  1`] = `
     </div>
   </div>
   <div
-    className="button"
+    className="btn"
   >
-    Loading ....
+    <button
+      type="button"
+    >
+      Loading ....
+    </button>
   </div>
 </div>
 `;
@@ -135,15 +139,200 @@ exports[`Button Testing Has valid snapshot 1`] = `
 `;
 
 exports[`ListItem Testing Has valid snapshot 1`] = `
-<span
-  className="btn"
+<div
+  className="table"
 >
-  <button
-    type="button"
+  <div
+    className="table-header "
   >
-    Add More 
-  </button>
-</span>
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <span
+        className="btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Title
+        </button>
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      <span
+        className="btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Author
+        </button>
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <span
+        className="btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Comments
+        </button>
+      </span>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      <span
+        className="btn"
+      >
+        <button
+          onClick={[Function]}
+          type="button"
+        >
+          Points
+        </button>
+      </span>
+    </span>
+    <button
+      className="button"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      Archive
+    </button>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <a>
+        1
+      </a>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      className="btn"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+  <div
+    className="table-row"
+  >
+    <span
+      style={
+        Object {
+          "width": "40%",
+        }
+      }
+    >
+      <a>
+        2
+      </a>
+    </span>
+    <span
+      style={
+        Object {
+          "width": "30%",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      1
+    </span>
+    <span
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    >
+      2
+    </span>
+    <span
+      className="btn"
+    >
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Dismiss
+      </button>
+    </span>
+  </div>
+</div>
 `;
 
 exports[`Search Testing   Has a valid snapshot  1`] = `

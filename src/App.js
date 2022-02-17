@@ -109,6 +109,7 @@ class App extends Component {
 
     // Client side caching using the searchKey property 
     const { searchKey, results } = this.state;
+
     const oldHits = results && results[searchKey]
       ? results[searchKey].hits
       : [];
@@ -299,7 +300,11 @@ class App extends Component {
 
 //Loading in React 
 // Describe a reuseable Loading element 
-const Loading = () => <div className="button">Loading ....</div>
+const Loading = () => <div className="btn">
+  <button type='button'>
+    Loading ....
+  </button>
+</div>
 
 //A sample Higher Order Component HOC 
 //It is a convention to prefix HOC with with

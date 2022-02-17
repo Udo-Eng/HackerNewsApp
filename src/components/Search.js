@@ -35,10 +35,10 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-    searchTerm: PropTypes.string.isRequired,
+    searchTerm: PropTypes.string,
     onChange: PropTypes.func.isRequired,
     onSubmit: PropTypes.func.isRequired,
-    children: PropTypes.element.isRequired
+    children: PropTypes.node.isRequired
 }
 
 export default Search;
