@@ -1,48 +1,7 @@
 import { sortBy } from 'lodash';
 import Button from './Button';
 import Sort from './Sort';
-
-
-// import React, { Component } from 'react';
-//Function to search through the list values 
-// const isSearched = searchTerm => item =>
-//     item.title.toLowerCase().includes(searchTerm.toLowerCase());
-
-// class ListItem extends Component {
-
-//     render() {
-//         const { list, searchTerm, onDismiss } = this.props;
-//         return (
-//             <div className="listitem">
-//                 {
-//                     list.filter(isSearched(searchTerm)).map((item) =>
-//                         < div key={item.objectID} className="item" >
-//                             <span>
-//                                 <a href={item.url}>
-//                                     {item.title}
-//                                 </a>
-//                             </span>
-//                             <span>{item.author}</span>
-//                             <span>{item.num_comments}</span>
-//                             <span>{item.points}</span>
-//                             <Button onClick={() => onDismiss(item.objectID)
-//                             } >
-//                                 Dismiss
-//                             </Button>
-//                         </div>
-//                     )
-//                 }
-//             </div>
-
-//         )
-//     }
-// }
-
-// export default ListItem;
-
-// Removed the Filtering property
-// const isSearched = searchTerm => item =>
-//     item.title.toLowerCase().includes(searchTerm.toLowerCase());
+import PropTypes from 'prop-types';
 
 
 // Declare a Sorts Object
@@ -146,4 +105,57 @@ function ListItems({ list, onDismiss, onSort, sortKey, isSortReverse }) {
 }
 
 
+
+ListItems.propTypes = {
+    list: PropTypes.array.isRequired,
+    onDismiss: PropTypes.func.isRequired,
+    sortKey: PropTypes.string.isRequired,
+    isSortReverse: PropTypes.bool.isRequired,
+    onSort: PropTypes.func.isRequired
+}
+
 export default ListItems;
+
+
+// Class Based implemntation of ListItems 
+
+// import React, { Component } from 'react';
+//Function to search through the list values 
+// const isSearched = searchTerm => item =>
+//     item.title.toLowerCase().includes(searchTerm.toLowerCase());
+
+// class ListItem extends Component {
+
+//     render() {
+//         const { list, searchTerm, onDismiss } = this.props;
+//         return (
+//             <div className="listitem">
+//                 {
+//                     list.filter(isSearched(searchTerm)).map((item) =>
+//                         < div key={item.objectID} className="item" >
+//                             <span>
+//                                 <a href={item.url}>
+//                                     {item.title}
+//                                 </a>
+//                             </span>
+//                             <span>{item.author}</span>
+//                             <span>{item.num_comments}</span>
+//                             <span>{item.points}</span>
+//                             <Button onClick={() => onDismiss(item.objectID)
+//                             } >
+//                                 Dismiss
+//                             </Button>
+//                         </div>
+//                     )
+//                 }
+//             </div>
+
+//         )
+//     }
+// }
+
+// export default ListItem;
+
+// Removed the Filtering property
+// const isSearched = searchTerm => item =>
+//     item.title.toLowerCase().includes(searchTerm.toLowerCase());

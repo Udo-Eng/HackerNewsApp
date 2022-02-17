@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
 
@@ -31,6 +32,13 @@ class Search extends Component {
             </div>
         )
     }
+}
+
+Search.propTypes = {
+    searchTerm: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    children: PropTypes.element.isRequired
 }
 
 export default Search;
