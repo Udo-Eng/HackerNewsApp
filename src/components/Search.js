@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 
 // Class Declaration using react 
 class Search extends Component {
+
     componentDidMount() {
         if (this.input) {
             this.input.focus();

@@ -79,7 +79,7 @@ class App extends Component {
       sortKey: 'NONE',
       isSortReverse: false,
     }
-    //Binding the user defined methods to the  class instance 
+    //Binding the class  methods to  class instances 
     this.onSort = this.onSort.bind(this);
     this.setSearchTopStories = this.setSearchTopStories.bind(this);
     this.onDismiss = this.onDismiss.bind(this);
@@ -95,6 +95,7 @@ class App extends Component {
       sortKey, isSortReverse
     })
   }
+
   needsToSearchTopStories(searchTerm) {
     return !this.state.results[searchTerm];
   }
@@ -123,8 +124,8 @@ class App extends Component {
   }
 
   //onDismiss function 
-  // complete Refactoring of the onDismiss callback 
-  // //Function to perform Filtering  an example of Higher order Functions 
+  // complete Refactoring of the onDismiss event Handler function 
+  // //Function to perform filtering  an example of Higher order Functions  HOF in react and javaScript
   // function isNotId(item) {
   //   return item.objectID !== id;
   // }
@@ -207,9 +208,7 @@ class App extends Component {
 
     if (this.needsToSearchTopStories()) {
       this.fetchSearchTopStories(searchTerm);
-
     }
-
     event.preventDefault();
   }
 
@@ -222,7 +221,6 @@ class App extends Component {
 
     //Function to fetch the serach stories 
     this.fetchSearchTopStories(searchTerm);
-
   }
 
   //The Life cycle method render()

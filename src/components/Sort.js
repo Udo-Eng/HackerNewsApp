@@ -12,6 +12,5 @@ export default function Sort({ sortKey, onSort, activeSortList, children }) {
             className={sortClass.join(' ')}>
             {children}
         </Button>
-
     )
 }

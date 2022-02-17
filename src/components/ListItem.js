@@ -45,7 +45,7 @@ import Sort from './Sort';
 //     item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
 
-//Declare a Sorts Object 
+// Declare a Sorts Object
 const SORTS = {
     NONE: list => list,
     TITLE: list => sortBy(list, 'title'),
@@ -55,6 +55,8 @@ const SORTS = {
 }
 
 function ListItems({ list, onDismiss, onSort, sortKey, isSortReverse }) {
+
+
     const sortedList = SORTS[sortKey](list);
     const reverseSortedList = isSortReverse
         ? sortedList.reverse()

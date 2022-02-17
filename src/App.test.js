@@ -1,6 +1,7 @@
 // import { render, screen } from '@testing-library/react';
 import ReactDOM from 'react-dom';
 import App, { Search, Button, ListItems } from './App';
+// Utility library for jest in React 
 import renderer from 'react-test-renderer';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
@@ -73,6 +74,7 @@ describe('Button Testing', () => {
     ReactDOM.unmountComponentAtNode(div);
   })
 
+  // Snapshot testing with jest and react-test-renderer  Utility function 
   test('Has valid snapshot', () => {
     const component = renderer.create(<Button>Add More </Button>);
 
@@ -110,14 +112,15 @@ describe('ListItem Testing', () => {
     expect(tree).toMatchSnapshot();
   })
 
-  //Using shallow and enzyme to assert that the ListItem 
+  //Using shallow and enzyme to assert that the ListItem  has two items
 
   it('ListItems contains Two items ', () => {
 
     // Enzyme uses other rendering methods namely 
     // render()
     // mount()
-    const element = shallow(<ItemLists{...props} />);
+
+    const element = shallow(<ListItems{...props} />);
 
     //Test section 
     expect(element.find('.table-row').length).toBe(2);
