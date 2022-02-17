@@ -89,7 +89,6 @@ describe('Button Testing', () => {
 describe('ListItem Testing', () => {
 
   //Creating the props to be passed into the ListItem Components 
-
   const props = {
     list: [
       { title: '1', author: '1', num_comments: 1, points: 2, objectID: 'y' },
